@@ -1,1 +1,7 @@
-full!
+{% for reponse_index  in (0..entity_ids_upper_bound) %}
+    {% assign entity_index = "IDX_" | append: reponse_index %}
+    {% assign entity = [entity_index] %}
+    {% if entity %}
+    State: {{ entity.state }}
+    {% endif %}
+{% endfor %}

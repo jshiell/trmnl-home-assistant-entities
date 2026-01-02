@@ -1,1 +1,2 @@
-
+{% assign entity_ids = trmnl.plugin_settings.custom_fields_values.entity_ids | split: "," %}
+{% assign entity_ids_upper_bound = entity_ids.size | minus: 1 %}
