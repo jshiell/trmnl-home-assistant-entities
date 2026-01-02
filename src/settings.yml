@@ -47,5 +47,11 @@ custom_fields:
   description: The entities to fetch data from
   help_text: You can fit 8 on a full screen, 4 on a half-horizontol screen, 2on a half-vertical screen, or 1 on a quadrant
   placeholder: sensor.a_sensor_name
+- keyname: entity_override_names
+  field_type: multi_string
+  name: Home Assistant Entity Override Names
+  description: Overrides for the entity names
+  help_text: If present, these will be displayed instead of the friendly names of the entities, using a 1-1 mapping. Empty values will be ignored, allowing you to override later items without changing earlier ones.
+  placeholder: Friendly Name
 name: Home Assistant Entities
 refresh_interval: 15

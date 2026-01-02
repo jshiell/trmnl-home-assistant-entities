@@ -7,7 +7,7 @@
         {% assign entity = [entity_index] %}
         {% if entity %}
         <div>
-            {% render "entity" with entity as entity %}
+            {% render "entity", entity: entity, entity_name: entity_override_names[forloop.index0] %}
         </div>
         {% endif %}
     {% endfor %}
