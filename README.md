@@ -2,7 +2,7 @@
 
 A plugin to view home assistant entities on a [TRMNL](https://usetrmnl.com) device.
 
-![A screenshot of the recipe running on trmnl-preview](screenshot.jpg)
+![A screenshot of the recipe running on trmnl-preview](screenshot.png)
 
 ## Prerequisites
 
