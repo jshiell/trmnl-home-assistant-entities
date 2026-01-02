@@ -39,13 +39,13 @@ custom_fields:
   field_type: string
   name: Home Assistant Long-lived Access Token
   description: Your long-lived access token for your Home Assistant server.
-  help_text: You can create a long-lived access token on <a href="https://my.home-assistant.io/redirect/profile">your Home Assistant profile page, on the Security tab</a>
+  help_text: You can create a long-lived access token on <a href="https://my.home-assistant.io/redirect/profile">your Home Assistant profile page, on the Security tab</a>.
   placeholder: your_long_lived_access_token
 - keyname: entity_ids
   field_type: multi_string
   name: Home Assistant Entity IDs
   description: The entities to fetch data from
-  help_text: You can fit 8 on a full screen, 4 on a half-horizontol screen, 2 on a half-vertical screen, or 1 on a quadrant
+  help_text: You can fit 8 on a full screen, 4 on a half-horizontol screen, 2 on a half-vertical screen, or 1 on a quadrant. They will be displayed left-to-right, top-to-bottom.
   placeholder: sensor.a_sensor_name
 - keyname: entity_override_names
   field_type: multi_string
