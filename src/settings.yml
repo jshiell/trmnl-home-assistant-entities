@@ -1,51 +1,51 @@
 ---
 strategy: polling
-no_screen_padding: 'no'
-dark_mode: 'no'
-static_data: ''
+no_screen_padding: "no"
+dark_mode: "no"
+static_data: ""
 polling_verb: get
 polling_url: |
   {% assign ids = entity_ids | split: "," %}
   {% for id in ids %}{{ hass_uri }}/api/states/{{ id }}
   {% endfor %}
 polling_headers: content-type=application/json&Authorization=Bearer {{ hass_access_token }}
-polling_body: 
+polling_body:
 id: 212986
 custom_fields:
-- keyname: author_bio
-  name: About This Plugin
-  category: life
-  field_type: author_bio
-  description: |
-    Home Assistant Entities displays the state of a number of entities from a Home Assistant server.
-    <br><br>
-    <strong>Prerequisites</strong>
-    <br>
-    You will need:<br>
-    1. A publicly-accessible <a href="https://www.home-assistant.io">Home Assistant</a> server (i.e. from the public internet, if you're using usetrmnl.com, or to your server if in a BYOS environment). If public, the easiest way to do this is via <a href="https://www.home-assistant.io/cloud/">Home Assistant Cloud</a>.<br>
-    2. A long-lived access token for your server, which you can generate from <a href="https://my.home-assistant.io/redirect/profile">your profile on the Security tab</a>.
-    <br><br>
-    <strong>Attributions</strong>
-    <br>
-    The icons used in this plugin are <a href="https://github.com/Templarian/MaterialDesign/blob/master/LICENSE">from the Material Design icons</a>.
-  github_url: https://github.com/jshiell/trmnl-home-assistant-entities
-- keyname: hass_uri
-  field_type: url
-  name: Home Assistant URI
-  description: The URI of your Home Assistant server, without a trailing slash.
-  help_text: This must be accessible to your TRMNL server, which means this must be publicly accessible if you're using usetrmnl.com!
-  placeholder: http://home.local:8123
-- keyname: hass_access_token
-  field_type: string
-  name: Home Assistant Long-lived Access Token
-  description: Your long-lived access token for your Home Assistant server.
-  help_text: You can create a long-lived access token on <a href="https://my.home-assistant.io/redirect/profile">your Home Assistant profile page, on the Security tab</a>
-  placeholder: your_long_lived_access_token
-- keyname: entity_ids
-  field_type: multi_string
-  name: Home Assistant Entity IDs
-  description: The entities to fetch data from
-  help_text: You can fit 8 on a full screen, 4 on a half screen, or 2 on a quadrant
-  placeholder: sensor.a_sensor_name
+  - keyname: author_bio
+    name: About This Plugin
+    category: life
+    field_type: author_bio
+    description: |
+      Home Assistant Entities displays the state of a number of entities from a Home Assistant server.
+      <br><br>
+      <strong>Prerequisites</strong>
+      <br>
+      You will need:<br>
+      1. A publicly-accessible <a href="https://www.home-assistant.io">Home Assistant</a> server (i.e. from the public internet, if you're using usetrmnl.com, or to your server if in a BYOS environment). If public, the easiest way to do this is via <a href="https://www.home-assistant.io/cloud/">Home Assistant Cloud</a>.<br>
+      2. A long-lived access token for your server, which you can generate from <a href="https://my.home-assistant.io/redirect/profile">your profile on the Security tab</a>.
+      <br><br>
+      <strong>Attributions</strong>
+      <br>
+      The icons used in this plugin are <a href="https://github.com/Templarian/MaterialDesign/blob/master/LICENSE">from the Material Design icons</a>.
+    github_url: https://github.com/jshiell/trmnl-home-assistant-entities
+  - keyname: hass_uri
+    field_type: url
+    name: Home Assistant URI
+    description: The URI of your Home Assistant server, without a trailing slash.
+    help_text: This must be accessible to your TRMNL server, which means this must be publicly accessible if you're using usetrmnl.com!
+    placeholder: http://home.local:8123
+  - keyname: hass_access_token
+    field_type: string
+    name: Home Assistant Long-lived Access Token
+    description: Your long-lived access token for your Home Assistant server.
+    help_text: You can create a long-lived access token on <a href="https://my.home-assistant.io/redirect/profile">your Home Assistant profile page, on the Security tab</a>
+    placeholder: your_long_lived_access_token
+  - keyname: entity_ids
+    field_type: multi_string
+    name: Home Assistant Entity IDs
+    description: The entities to fetch data from
+    help_text: You can fit 8 on a full screen, 4 on a half-horizontol screen, 2on a half-vertical screen, or 1 on a quadrant
+    placeholder: sensor.a_sensor_name
 name: Home Assistant Entities
 refresh_interval: 15

@@ -10,8 +10,7 @@ watch:
 custom_fields:
   hass_uri: "http://home.local.infernus.org:8123"
   hass_access_token: "{{ env.HOME_ASSISTANT_ACCESS_TOKEN }}"
-  entity_ids: sensor.bathroom_climate_temperature,sensor.bedroom_climate_temperature
-
+  entity_ids: sensor.bathroom_climate_temperature,sensor.bedroom_climate_temperature,sensor.0x00158d0008dfc616_humidity,binary_sensor.0x00158d0007ed2870_contact,light.0x0017880108d9af54,climate.cc4740092d01,light.spotlights,switch.0xa4c13801e0fcffff_outlet_control_protect
 # override variables
 variables:
   trmnl: {}

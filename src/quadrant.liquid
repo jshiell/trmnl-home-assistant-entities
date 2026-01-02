@@ -1,1 +1,18 @@
-quadrant!
+{% assign entity_ids_upper_bound = entity_ids.size | minus: 1 | at_most: 0 %}
+<div class="layout layout--stretch-x">
+    <div class="grid grid--cols-1 text--center">
+    {% for reponse_index  in (0..entity_ids_upper_bound) %}
+        {% assign entity_index = "IDX_" | append: reponse_index %}
+        {% assign entity = [entity_index] %}
+        {% if entity %}
+        <div>
+            {% render "entity" with entity as entity %}
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+<div class="title_bar">
+    <span class="title">Home Assistant</span>
+    <span class="instance">Updated {{ "now" | date: "%s" | plus: trmnl.user.utc_offset | date: "%H:%M" }}</span>
+</div>
